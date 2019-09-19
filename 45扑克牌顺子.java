@@ -1,6 +1,6 @@
 // two conditions
 // 1. no replica
-// 2. max - min <= 5
+// 2. max - min > 4
 
 public class Solution {
     public boolean isContinuous(int[] numbers) {
