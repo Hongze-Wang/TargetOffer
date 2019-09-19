@@ -52,22 +52,22 @@
 // Using XOR
 
 public class Solution {
-    public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
-        int xor1 = 0;
+    public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
+        int xor = 0;
         for(int i = 0; i < array.length; i++) {
-            xor1 = xor1 ^ array[i];
-        }
+            xor = xor ^ array[i];
+        } // store the xor result of the two number we want to find
         int index = 1;
-        while((index & xor1) == 0) {
+        while((index & xor) == 0) {
             index = index << 1;
-        }
+        } // find one digit that is different in two number
         int res1 = 0, res2 = 0;
         for(int i = 0; i < array.length; i++) {
             if((index & array[i]) == 0) {
                 res1 = res1 ^ array[i];
             } else {
                 res2 = res2 ^ array[i];
-            }
+            } // seperate the two number use the digit we found
         }
         num1[0] = res1;
         num2[0] = res2;
