@@ -6,3 +6,5 @@ for(int i = 0; i < numbers.length; i++) {
     }
     flag |= 1 << numbers[i];
 }
+
+// 这种方法需要numbers[i]非常小 不超过31
