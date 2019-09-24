@@ -51,7 +51,7 @@ public class TreeNode {
 
 // 层次遍历 
 // 比起上面使用map记录每次层要打印的个数 
-// 这里使用了两个变量 count 需要计数打印的个数 num记录还需要数字个数
+// 这里使用了两个变量 count 需要计数打印的个数 num记录还需要打印的个数
 public class Solution {
     ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
         if(pRoot == null) return new ArrayList();
