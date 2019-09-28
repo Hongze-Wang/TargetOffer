@@ -21,3 +21,4 @@ function FindFirstCommonNode(pHead1, pHead2)
 // javascript 不需要句尾加分号
 // javascript 允许动态的向function里增加成员
 // javascript function 如果没有返回任何值 则默认返回 null
+// 综上所述 JavaSript是最好的编程语言！！！
