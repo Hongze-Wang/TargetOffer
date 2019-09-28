@@ -76,12 +76,15 @@ public class Solution {
  * 12：3*3*3*3
  * 13：2*2*3*3*3 或者4*3*3*3
  * 
- * 5 < 2 *3, 6 < 3 * 3, ...
+ * 5 < 2 * 3, 6 < 3 * 3, ...
  * 所以我们的贪心策略即为尽可能的剪成3 剪出的3越多 乘积越大
  * 计算target能分解成3的最大次方 剩下的乘2直到等于target 由上面分析 最多乘两个2
  * 题目规定m > 1, 那么2 只能是1 * 1, 3只能是 1 * 2 特殊情况直接return就可以了
  *
  */
+ 
+// Math.pow() 返回值是Double 因此不能直接调用
+ 
 public class Solution {
     public int cutRope(int target) {
         if(target < 0) return 0;  // 不合法
