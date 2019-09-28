@@ -82,9 +82,30 @@ public class Solution {
  * 题目规定m > 1, 那么2 只能是1 * 1, 3只能是 1 * 2 特殊情况直接return就可以了
  *
  */
- 
+    
 // Math.pow() 返回值是Double 因此不能直接调用
+// 下面两个写法相同 第二个只是自己实现了指数运算
  
+public class Solution {
+    public int cutRope(int target) {
+        if(target < 0) return 0;  // 不合法
+        if(target == 1) return 1; // 不合法
+        if(target == 2) return 1; // 特殊
+        if(target == 3) return 2; // 特殊
+
+        int x = target % 3;
+        int y = target / 3;
+        int res;
+        if(x == 0) {
+            return (int)Math.pow(3, y);
+        } else if(x == 1) {
+            return 2 * 2 * (int)Math.pow(3, y - 1);
+        } else {
+            return 2 * (int)Math.pow(3, y);
+        }
+    }
+}    
+
 public class Solution {
     public int cutRope(int target) {
         if(target < 0) return 0;  // 不合法
