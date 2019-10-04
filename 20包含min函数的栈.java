@@ -1,68 +1,30 @@
+// 同LeetCode 155. Min Stack
+
 // import java.util.Stack;
 // 双栈法 维持一个辅助栈保存最小值
 // if new elem < the peek of the helper stack, put the elem into the helper stack
 // if new elem >= the peek of helper stack, put the peek into helper stack
 // This means that we maintain the two stack to the same height
-// public class Solution {
-//     Stack<Integer> stack = new Stack<>();
-//     Stack<Integer> minStack = new Stack<>();
-    
-//     public void push(int node) {
-//         stack.push(node);
-//         if(minStack.empty()) {
-//             minStack.push(node);
-//         } else {
-//             if(node < minStack.peek()) {
-//                 minStack.push(node);
-//             } else {
-//                 minStack.push(minStack.peek());
-//             }
-//         }
-//     }
-    
-//     public void pop() {
-//         stack.pop();
-//         minStack.pop();
-//     }
-    
-//     public int top() {
-//         return stack.peek();
-//     }
-    
-//     public int min() {
-//         return minStack.peek();
-//     }
-// }
-
-
-// May not be better than above solution in some case;
-import java.util.Stack;
-// 最小值记录法
-// Reserve the old min value into the stack
-// So the peek of the stack is always point the min value even after you pop
 public class Solution {
     Stack<Integer> stack = new Stack<>();
-    int min = Integer.MAX_VALUE;
+    Stack<Integer> minStack = new Stack<>();
     
     public void push(int node) {
-        if(stack.empty()) {
-            stack.push(node);
-            min = node;
+        stack.push(node);
+        if(minStack.empty()) {
+            minStack.push(node);
         } else {
-            if(node < min) {
-                stack.push(min); 
-                min = node;
+            if(node < minStack.peek()) {
+                minStack.push(node);
+            } else {
+                minStack.push(minStack.peek());
             }
-            stack.push(node);
         }
     }
     
     public void pop() {
-        if(min == stack.peek()) {
-            stack.pop();
-            min = stack.peek();
-        }
         stack.pop();
+        minStack.pop();
     }
     
     public int top() {
@@ -70,9 +32,49 @@ public class Solution {
     }
     
     public int min() {
-        return min;
+        return minStack.peek();
     }
 }
+
+// 下面这个方法能在牛客网通过 但LeetCode通不过 它不能处理有多个相同的最小值入栈的情况
+// May not be better than above solution in some case;
+// import java.util.Stack;
+// 最小值记录法
+// Reserve the old min value into the stack
+// So the peek of the stack is always point the min value even after you pop
+// public class Solution {
+//     Stack<Integer> stack = new Stack<>();
+//     int min = Integer.MAX_VALUE;
+    
+//     public void push(int node) {
+//         if(stack.empty()) {
+//             stack.push(node);
+//             min = node;
+//         } else {
+//             if(node < min) {
+//                 stack.push(min); 
+//                 min = node;
+//             }
+//             stack.push(node);
+//         }
+//     }
+    
+//     public void pop() {
+//         if(min == stack.peek()) {
+//             stack.pop();
+//             min = stack.peek();
+//         }
+//         stack.pop();
+//     }
+    
+//     public int top() {
+//         return stack.peek();
+//     }
+    
+//     public int min() {
+//         return min;
+//     }
+// }
 
 // import java.util.Stack;
 
