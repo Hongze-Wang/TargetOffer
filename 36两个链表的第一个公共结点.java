@@ -1,5 +1,4 @@
 // 同LeetCode 160. Intersection of Two Linked Lists
-// 下面的解法仅用于两个链表一定有公共结点的情况 LeetCode要求更严格一点 下面解法能在牛客网通过 但LeetCode过不了
 
 /*
 public class ListNode {
