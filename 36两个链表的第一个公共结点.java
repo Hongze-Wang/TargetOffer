@@ -1,3 +1,5 @@
+// 同LeetCode 160. Intersection of Two Linked Lists
+
 /*
 public class ListNode {
     int val;
@@ -35,6 +37,9 @@ public class ListNode {
 //         return list1.get(++i);
 //     }
 // }
+
+
+// 下面这个解法仅用于两个链表一定有公共结点的情况
 
 public class Solution {
     public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
