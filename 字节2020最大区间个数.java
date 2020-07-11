@@ -32,7 +32,7 @@ class Solution {
             points[2*i+1] = new Point(A[i].end, 1);
         }
         Collections.sort(points);
-        for(int i=0; i<points.length; i++) {
+        for(int i=0; i<A.length; i++) {
             if(points[i].type == 0) {
                 count++;
                 max = Math.max(max, count);
