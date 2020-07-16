@@ -18,20 +18,20 @@ public class BigIntegerAdd {
         int carry = 0;
         while(idx1 >= 0 && idx2 >=0) {
             int sum = arr1[idx1] - '0' + arr2[idx2] - '0' + carry;
-            carry = sum >= 10 ? 1 : 0;
+            carry = sum / 10;
             sb.append((char)(sum%10) + '0');
             idx1--;
             idx2--;
         }
         while(idx1 >= 0) {
             int sum = arr1[idx1] - '0' + carry;
-            carry = sum >= 10 ? 1: 0;
+            carry = sum / 10;
             sb.append((char)(sum%10) + '0');
             idx1--;
         }
         while(idx2 >= 0) {
             int sum = arr2[idx2] - '0' + carry;
-            carry = sum >= 10 ? 1: 0;
+            carry = sum / 10;
             sb.append((char)(sum%10) + '0');
             idx2--;
         }
