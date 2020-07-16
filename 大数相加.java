@@ -1,7 +1,7 @@
 // 大数相加
 public class BigIntegerAdd {
     public String add(String str1, String str2) {
-        if(str1 == null || "".equals(str2)) {
+        if(str1 == null || "".equals(str1)) {
             return str2;
         }
         if(str2 == null || "".equals(str2)) {
