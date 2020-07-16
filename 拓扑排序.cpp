@@ -43,7 +43,7 @@ int toposort(vector<int> &node, vector<vector<int>> &adjmatrix, vector<int> &ind
             que.push(i);
         }
     }
-    while(!q.empty()) {
+    while(!que.empty()) {
         int p=que.front(); // 优先队列 使用top() 求字典序最小拓扑排血
         res.push_back(p);
         que.pop();
