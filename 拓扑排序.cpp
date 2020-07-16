@@ -1,9 +1,9 @@
 // 拓扑排序
 // 核心思想 借助队列
 // 首先将所有入度为0的顶点加入队列
-// 然后只有队列非空 重复以下步骤：
+// 然后只要队列非空 重复以下步骤：
 // 出队 将所有以该出队节点的邻接点 入度减一
-// 如果减零则加入队列
+// 如果某点入度减零则加入队列
 
 
 class Node {
@@ -35,7 +35,7 @@ public:
     }
 };
 
-int toposort(vector<int> &node, vector<vector<int>> adjmatrix, vector<int> indegree) {
+int toposort(vector<int> &node, vector<vector<int>> &adjmatrix, vector<int> &indegree) {
     vector<int> res;
     queue<int> que;
     for(int i=0; i<n; i++) {
