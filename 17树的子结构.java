@@ -1,3 +1,5 @@
+// leetcode 572
+// 下面的解法并不能过leetcode 建议移步leetcode_java
 /**
 public class TreeNode {
     int val = 0;
