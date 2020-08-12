@@ -6,9 +6,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        HashSet<Integer> set = new HashSet<>();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] a = new int[n];
