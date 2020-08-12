@@ -49,9 +49,9 @@ def get_max_len(str):
     return c
 
 # dp
-# dp1 store all N length, restart to count if there is one capital
-# dp2 restart to count if there is two capital not N
-# dp3 restart to count if there is three captial
+# dp1 do not need modify
+# dp2 need modify once
+# dp3 need modify twice
 def get_max_len(str):
     str_len = len(str)
     dp1 = [0] * (str_len+1)
