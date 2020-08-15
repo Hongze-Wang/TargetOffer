@@ -30,7 +30,7 @@ public class Main {
                     }
                     if(right == -1 || right == i-1) {
                         right = i;
-                    } else if(right != -1 || right != i-1) { //需要转换的地方不连续
+                    } else if(right != -1 || right != i-1) { // 需要转换的地方不连续
                         System.out.println("NO");
                         flag = false;
                         break;
