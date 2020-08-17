@@ -6,10 +6,12 @@
 // 爬楼梯问题:     爬最少的次数爬完1024-N层楼梯，每次可以爬1/4/16/64
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int mian() {
+int main() {
     int N;
+    int coin[] = {1, 4, 16, 64}; 
     cin >> N;
     int need = 1024-N;
     vector<int> dp(need+1, need+1);
