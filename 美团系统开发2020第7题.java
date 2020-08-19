@@ -22,6 +22,8 @@ package QiuZhao;
 "74"
 */
 
+// 注意读题 输入有双引号
+
 import java.util.Scanner;
 
 public class Main {
