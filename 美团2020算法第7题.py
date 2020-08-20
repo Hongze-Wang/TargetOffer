@@ -64,7 +64,7 @@ def isChange(str1, str2):
 strs = input().split(",")
 
 str_len = len(strs)
-# bubble sort
+# selection sort
 for i in range(0, str_len-1):
     for j in range(i+1, str_len):
         if isChange(strs[i], strs[j]):
