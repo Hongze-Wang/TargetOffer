@@ -18,7 +18,7 @@ class Point implement Comparable<Point> {
     }
     public int compareTo(Point p) {
         if(this.value == p.value) return 0;
-        else if(this.value > p.value)
+        else if(this.value > p.value) return 1;
         else return -1;
     }
 }
