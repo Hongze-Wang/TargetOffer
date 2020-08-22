@@ -71,7 +71,7 @@ public class Tencent2020backend3 {
         int[] l = new int[len1];
         int[] r = new int[len2];
         System.arraycopy(arr, left, l, 0, len1);
-        System.arraycopy(arr,mid+1, r, 0, len2);
+        System.arraycopy(arr, mid+1, r, 0, len2);
         int i=len1-1, j=len2-1, k=right;
         long c = 0;
         while(i >= 0 && j >= 0) {
