@@ -43,7 +43,7 @@ struct Work {
 // int cmp(node a, node b) {
 //    return a.time < b.time;
 // }
-priority_queue<ll, vector<ll>, greater<ll>> q;
+priority_queue<ll, vector<ll>, greater<ll>> q; // 小堆 堆中保存了任务收益 堆的大小即做任务的数量
 
 int main() {
     int n;
