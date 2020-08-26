@@ -43,7 +43,7 @@ public class GreedyHeap {
                 cur -= y[i];
                 count++;
             } else if(!pq.isEmpty() && y[i] < pq.peek()) {
-                cur += pq.poll()-y[i]; // 后悔操作 不卖给之前最大需求的顾客 以提高鸡翅保有量来服务更多客人
+                cur += pq.poll()-y[i]; // 后悔操作 不卖给之前最大需求的顾客(提高鸡翅保有量) 而卖给当前顾客
                 pq.offer(y[i]);
             }
         }
