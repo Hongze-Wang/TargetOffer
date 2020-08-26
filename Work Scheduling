@@ -56,7 +56,7 @@ int main() {
     for(int i=0; i<n; i++) {
         if(q.size() < work[i].time) {
             q.push(work[i].profit);
-        } else if(q.top() < work[i].profit) {
+        } else if(q.top() < work[i].profit) { // 后悔操作 发现当前任务不能做 但是堆中最小收益 不如当前任务 取消最小收益任务 改做当前任务
             q.pop();
             q.push(work[i].profit);
         }
