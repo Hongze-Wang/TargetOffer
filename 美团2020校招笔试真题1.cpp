@@ -15,6 +15,7 @@ void get(int key, unordered_map<int, int>& hash, list<int>& l) {
         }
     }
     l.push_back(key); // 将刚刚访问的重置为缓冲区最后端
+    // return hash[key];
 }
 
 void put(int key, int value, unordered_map<int, int>& hash, list<int> l, int N) {
