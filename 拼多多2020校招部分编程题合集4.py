@@ -39,7 +39,7 @@ def expectation(n, nums):
     ans = 0
     pre = 0
 
-    for i in range(1, maxN+1): # loop for i~n number
+    for i in range(1, maxN+1): # loop for i~maxN number
         cur = 1
         for j in range(n):     # loop for jth shaizi
             cur *= min(i, nums[j]) / nums[j]
