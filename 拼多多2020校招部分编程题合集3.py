@@ -2,7 +2,6 @@
 
 '''
 使用hashmap避免重复计算
-
 '''
 
 count_dict = {}
