@@ -17,26 +17,29 @@ for i in range(size):
         if i == cro or j == cro: # 经过拥堵结点 代价增加指定值 因为对称 所以不会重复添加
             graph[i][j] += exp
 
-# Dijkstra 求解一点到其余点的最短路径
+# Dijkstra求解一点到其余点的最短路径
 class Solution:
-    def dijjstra(self, graph, v0):
-        final, D = [0] * size, [0] * size # final 保存已遍历过的点 D保存从起始结点到下标结点的最短路径
-        for i in range(size):             # 初始化所有结点代价
-            D[i] = graph[v0][i]
-        D[v0] = 0                         # 初始化v0到v0最短路径为0
-        final[v0] = 1                     # 将v0置为已访问
-        k = v0                            # 初始化k k是一个用来保存能缩短路径结点的结点编号
-        for v in range(1, size):
-            min = float("inf")
-            for w in range(size):
-                if final[w] == 0 and D[w] < min: # 找到未访问过的最短路径结点
-                    k = w
-                    min = D[w]
-            final[k] = 1                        # 将该结点置为已访问
-            for w in range(size): # 更新经过结点k构成新路径之后的最短路径：
-                if final[w] == 0 and min + graph[k][w] < D[w]:
-                    D[w] = min + graph[k][w]
-        return D
+    def dijkstra(self, graph, v0):
+        visited, distance = [0] * size, [0] * size # visited 保存已遍历过的点 distance保存从起始结点到下标结点的最短路径
+        for i in range(size):                      # 初始化所有结点代价
+            distance[i] = graph[v0][i]             
 
+        distance[v0] = 0  # 初始化v0到v0最短路径为0
+        visited[v0] = 1   # 将v0置为已访问
+        k = v0            # 初始化k k是一个用来保存能缩短路径结点的结点编号
+        for v in range(1, size):
+            min_dis = float("inf")
+            for w in range(size): # 找到未访问过的最短路径结
+                if visited[w] == 0 and distance[w] < min_dis: 点
+                    min_dis = distance[w]
+                    k = w
+            visited[k] = 1 # 将该结点置为已访问
+            for w in range(size): # 更新经过结点k构成新路径之后的最短路径
+                if visited[w] == 0 and min_dis + graph[k][w] < distance[w]:
+                    distance[w] = min_dis + graph[k][w]
+        return distance
+    
 s = Solution()
-print(s.dijjstra(graph, 0)[des])
+print(s.dijkstra(graph, 0)[des])
+
+
