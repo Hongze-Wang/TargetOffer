@@ -38,7 +38,7 @@ int main() {
                     break;
                 }
             }
-            if(f) {
+            if(f) { // 只要有一次匹配成功即成功 所以需要bool变量f 仅有flag是不够的
                 flag = true;
                 break;
             }
