@@ -5,6 +5,7 @@
 // 则i+eps/2 是一个精度更高的解                       i+eps/2能大致将其定位到坐标轴上 即是解
 // 这是一个加速的trick
 // 如果不使用这个trick 你可以把eps取更小 但这样你可能会超时
+// [-1000, 1000]貌似也行 笔试的时候可以试试
 
 #include <bits/stdc++.h>
 using namespace std;
