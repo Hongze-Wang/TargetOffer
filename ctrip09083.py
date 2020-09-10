@@ -1,9 +1,6 @@
 # 第三题：字符串编码的压缩，按一定压缩规则把字母数字组合转换成数字
 
 s = input()
-i, segment = 0, []# 第三题：字符串编码的压缩，按一定压缩规则把字母数字组合转换成数字
-
-s = input()
 i, segment = 0, []
 while i+5 < len(s):
     segment.append(s[i: i+5])
