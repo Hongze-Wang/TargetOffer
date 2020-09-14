@@ -1,7 +1,7 @@
 package QiuZhao;
 
 /*
-链接：https://www.nowcoder.com/questionTerminal/35fac8d69f314e958a150c141894ef6a
+链接：https://www.nowcoder.com/question/next?pid=21283868&qid=830860&tid=37511217
 来源：牛客网
 
 [编程题]逛街
