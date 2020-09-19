@@ -29,8 +29,8 @@ class Solution:
         k = v0            # 初始化k k是一个用来保存能缩短路径结点的结点编号
         for v in range(1, size):
             min_dis = float("inf")
-            for w in range(size): # 找到未访问过的最短路径结
-                if visited[w] == 0 and distance[w] < min_dis: 点
+            for w in range(size): # 找到未访问过的最短路径结点
+                if visited[w] == 0 and distance[w] < min_dis:
                     min_dis = distance[w]
                     k = w
             visited[k] = 1 # 将该结点置为已访问
