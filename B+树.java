@@ -11,7 +11,7 @@
  * PAGE_SIZE = (m-1)*4[keywordss大小]+m*8[children大小]
  */
 
- public class BPlusTreeNode { // 非节点
+ public class BPlusTreeNode { // 非叶子节点
      public static int m = 5; // 5叉树
      public int[] keywords = new int[m-1]; // 键值 用来划分数据区间
      public BPlusTreeNode[] children = new BPlusTreeNode[m]; // 保存子节点指针
