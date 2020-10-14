@@ -22,7 +22,7 @@ class Solution {
         long one=1, two=2, three=4;
         for(int i=4; i<=n; i++) {
             long pretwo = two, prethree = three;
-            three = (one + pretwo + three) % 1000000007;
+            three = (one + pretwo + prethree) % 1000000007;
             one = pretwo;
             two = prethree;
         }
