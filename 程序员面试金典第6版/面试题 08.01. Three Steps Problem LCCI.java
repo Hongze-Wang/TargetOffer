@@ -12,6 +12,8 @@
 //     }
 // }
 
+// 每次循环其实只操纵三个变量 因此不需要dp数组来存储 摸清楚变量变化的规律之后 就可以进行空间上的省
+
 class Solution {
     public int waysToStep(int n) {
         if(n <= 2) return n;
