@@ -50,10 +50,10 @@ class Print2 {
         @Override
         public void run() {
             while (count <= 100) {
+                lock.lock();
+                System.out.println(Thread.currentThread().getName() + ": " + count++);
+                condition.signalAll();
                 try {
-                    lock.lock();
-                    System.out.println(Thread.currentThread().getName() + ": " + count++);
-                    condition.signalAll();
                     if(count <= 100) {
                         condition.await();
                     } else {
