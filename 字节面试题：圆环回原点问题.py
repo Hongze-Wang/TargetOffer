@@ -13,7 +13,7 @@
 
 class Solution:
     def backToStart(self, n: int, length: int) -> int:
-        dp = [[0] * length for _ in range(length+1)]
+        dp = [[0] * length for _ in range(length+1)] # dp = [[0] * length for _ in range(n+1)]
         dp[0][0] = 1
 
         for i in range(1, length+1): # for i in range(1, n+1): 大于n步的不需要再求了
